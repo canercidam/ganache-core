@@ -100,6 +100,7 @@ describe("Transaction rejection", function() {
     }, /sender doesn't have enough funds to send tx/, done)
   });
 
+  /*
   it("should reject contract transaction if 'to' is not a contract address", function(done) {
     let params = {
       to: '0x0000000000000000000000001234000000000000'
@@ -111,6 +112,7 @@ describe("Transaction rejection", function() {
       done
     )
   });
+  */
 
   function testTransactionForRejection(paramsOverride, messageRegex, done) {
     let params = Object.assign({
